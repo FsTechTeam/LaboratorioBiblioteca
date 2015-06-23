@@ -8,11 +8,10 @@ package modulos;
  *
  * @author Geek
  */
-public class ObservadorEspecifico implements Observador{
-    mostrar salida;
+public class Tabla implements mostrar{
 
     @Override
-    public void actualizar() {
+    public void mostrar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
