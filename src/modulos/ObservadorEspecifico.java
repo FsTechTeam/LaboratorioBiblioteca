@@ -4,16 +4,38 @@
  */
 package modulos;
 
+import java.util.List;
+
 /**
  *
  * @author Geek
  */
 public class ObservadorEspecifico implements Observador{
-    mostrar salida;
-
+    
+    Mostrar muestra;
+    
+    List<Object> lista;
     @Override
     public void actualizar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.lista=muestra.obtenerDatos();
     }
+
+    public Mostrar getMuestra() {
+        return muestra;
+    }
+
+    public void setMuestra(Mostrar muestra) {
+        this.muestra = muestra;
+    }
+
+    public List<Object> getLista() {
+        return lista;
+    }
+
+    public void setLista(List<Object> lista) {
+        this.lista = lista;
+    }
+    
+    
     
 }

@@ -25,12 +25,18 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Geek
  */
 @Entity
+
 @Table(name = "Autor")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Autor.findAll", query = "SELECT a FROM Autor a"),
     @NamedQuery(name = "Autor.findById", query = "SELECT a FROM Autor a WHERE a.id = :id"),
-    @NamedQuery(name = "Autor.findByAutor", query = "SELECT a FROM Autor a WHERE a.autor = :autor")})
+    @NamedQuery(name = "Autor.findByAutor", query = "SELECT a FROM Autor a WHERE a.autor = :autor"),
+    @NamedQuery(name="Autor.findAutorLike",query="select u from Autor u"+" where u.Autor LIKE :autor") //Solo me servira a acceder facilmente a esto    
+
+
+
+})
 public class Autor implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
